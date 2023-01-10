@@ -2,10 +2,8 @@
 
 init_input= input()
 spl_input= init_input.split()
-#N=int(spl_input[0])
-#M=int(spl_input[1])
-N=11
-M=33
+N=int(spl_input[0])
+M=int(spl_input[1])
 a=".|."
 #midle row
 mr= int((N+1)/2)
@@ -38,11 +36,12 @@ for i in range(1,N+1):
                 k=3+(i-2)*2
             rk=k*3
             usk=int(rk/2)
+            if i==mr-1:
+                h=k
         else:
             #k=k+2
             k=k-((i)-(mr+1))*2
             
-            h=k
             for o in range(mr+1,i+1):
                 k=h-((i)-(mr+1))*2
             rk=k*3
@@ -64,6 +63,6 @@ for i in range(1,N+1):
             for j in range(ml+usk+1,M+1):
                 lines=lines+("-")
             print(lines)
-        print(k)
+        
             
             
