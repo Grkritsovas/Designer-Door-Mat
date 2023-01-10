@@ -1,4 +1,5 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
+
 init_input= input()
 spl_input= init_input.split()
 #N=int(spl_input[0])
@@ -33,14 +34,17 @@ for i in range(1,N+1):
         print(lines)
     else:
         if i<mr:
-            for p in range(3,i+1):
-                k=k+2
+            for p in range(2,i+1):
+                k=3+(i-2)*2
             rk=k*3
             usk=int(rk/2)
         else:
-            k=k+2
+            #k=k+2
+            k=k-((i)-(mr+1))*2
+            
+            h=k
             for o in range(mr+1,i+1):
-                k=k-2
+                k=h-((i)-(mr+1))*2
             rk=k*3
             usk=int(rk/2)
         
@@ -60,5 +64,6 @@ for i in range(1,N+1):
             for j in range(ml+usk+1,M+1):
                 lines=lines+("-")
             print(lines)
-            k=3
-            rk=0
+        print(k)
+            
+            
